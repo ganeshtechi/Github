@@ -1,0 +1,20 @@
+##============================================================================================================
+## Please specify buckets and first level folders (modules) in following format for excluding from checking.
+# - Bucket: dev-bucket
+#   Modules:
+#     - prefix_folder1
+#     - prefix_folder2
+##============================================================================================================
+## To skip full bucket
+# - Bucket: bucket_name
+#   Modules:
+#     - /
+##============================================================================================================
+- Bucket: dev-bucket
+  Modules:
+    - prefix_subfolder1
+    - prefix_subfolder2
+
+- Bucket: prod-bucket
+  Modules:
+    - /
