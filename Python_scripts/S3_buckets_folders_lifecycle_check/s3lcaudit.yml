@@ -1,0 +1,12 @@
+AlertRecipient:
+  - dev-ops@company.com
+
+JIRA:
+  jira_url: https://company.atlassian.net/
+  jira_project_id: 
+  jira_project_name: 
+  jira_project_component_name: Security
+  issue_summary: Buckets/Modules that doesn't have life cycle policies
+  create_jira_tickets: 1
+  assignee: jira_assignee@company.com
+  description: "Below Buckets/Modules doesn't contain any life cycle policies, please specify objects validity\n otherwise default policy of 30 Days will be applied"
