@@ -1,0 +1,6 @@
+## If you want to run the policy audit only for few buckets.
+## you could update the below list and pass the file a conf
+## file to the script.
+
+#- _dev_bucket
+#- _qa_bucket
