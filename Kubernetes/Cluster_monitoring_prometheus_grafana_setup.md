@@ -7,7 +7,7 @@ sudo ./aws/install
 
 # Configure AWS CLI with access and secret keys
 
-#verify aws cli version
+## verify aws cli version
 aws --version 
 
 
