@@ -129,7 +129,7 @@ Get external IP to access grafana
 ```
 kubectl get service -n grafana 
 ```
-We can create dashboards on our own or we can also import from opensource community
-https://grafana.com/grafana/dashboards/ is the repo 
-Use import option in Grafana to add the dashboard
+We can create dashboards on our own or we can also import from opensource community.
+https://grafana.com/grafana/dashboards/ is the repo. 
+Use import option in Grafana to add the dashboard.
 Deploy applications and monitor in Grafana dashboard.
