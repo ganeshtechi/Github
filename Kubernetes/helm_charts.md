@@ -11,7 +11,7 @@ We can update the charts, rollout new version.
 We can also dry run to verify objects before we install.
 kubectl must be configured to connect with the cluster other wise it throws an error.  
 Make sure kubectl configured with the cluster and intended namespace.  
-We can also download publicly available helm charts from the repo https://artifacthub.io/
+We can also download publicly available helm charts from the repo https://artifacthub.io/.  
 We can also customize the default provided values but there will be limiatation that will be provided in the charts documents.  
 When we install the helm chart it start with Revision1 and when we update anything it makes the Revision2.  
 Always roll back to any version.  
@@ -85,7 +85,7 @@ wordpress-values.yml file has custom values.
 We can upgrade our helm chart at any point of time.  
 ```
 helm upgrade wordpress bitnami/wordpress --values=wordpress-values.yml 
-
+```
 We can check history of helm charts.  
 ```
 helm history project_name
