@@ -1,21 +1,22 @@
-#Install AWS CLI
-
+# Install AWS CLI
+```
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
+```
 
+# Configure AWS CLI with access and secret keys
 
-#Configure AWS CLI with access and secret keys
-# Verify AWS CLI version
+#verify aws cli version
 aws --version 
 
 
-Install Eksctl
+# Install Eksctl
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 sudo mv /tmp/eksctl /usr/local/bin
 
 
-Install kubectl 
+# Install kubectl 
 curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x ./kubectl 
 sudo mv ./kubectl /usr/local/bin
