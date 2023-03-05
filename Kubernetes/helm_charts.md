@@ -18,16 +18,16 @@ Always roll back to any version.
 
 
 # Helm charts structure
-
+```
 charts.yml:
-	Meta information about the chart
+	Meta information about the chart. 
 values.yml: 
-	Contains the values for the template file. It's like variable, we call these values in templates. 
+	Contains the values for the template file. It's like variable, we call these values in templates.  
 Charts: 
-	Contains other dependent charts. 
+	Contains other dependent charts.  
 Teamplates: 
-	Where you put all the manifest files that you are deploying with charts, Ex: 
-
+	Where you put all the manifest files that you are deploying with charts.  
+```
 
 # Install helm
 Download the binary from https://github.com/helm/helm/releases
