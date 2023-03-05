@@ -1,4 +1,4 @@
-# Install AWS CLI
+# Helm charts details
 
 
 Helm is package manager for kubernetes like yum and apt in linux boxes.  
