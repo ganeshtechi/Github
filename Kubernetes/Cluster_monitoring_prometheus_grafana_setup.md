@@ -8,33 +8,39 @@ sudo ./aws/install
 # Configure AWS CLI with access and secret keys
 
 ## verify aws cli version
+```
 aws --version 
-
+```
 
 # Install Eksctl
+```
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 sudo mv /tmp/eksctl /usr/local/bin
-
+```
 
 # Install kubectl 
+```
 curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x ./kubectl 
 sudo mv ./kubectl /usr/local/bin
-
-#Verify kubectl version
+```
+## Verify kubectl version
+```
 kubectl version 
+```
+Helm chart installation is required for prometheus and grafana setup
+Helm Chart works out of the box and it will take care of everything for you by installing prometheus-alertnamanger, prometheus-server, prometheus-operator
 
-#Helm chart installation is required for prometheus and grafana setup
-#Helm Chart works out of the box and it will take care of everything for you by installing prometheus-alertnamanger, prometheus-server, prometheus-operator
-
+```
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
-
+```
 
 #Crate kubernetes cluster
+```
 eksctl create cluster --name dev-cluster-1 --version 1.22 --region us-east-1 --nodegroup-name dev_worker-nodes --node-type t2.large --nodes 2 --nodes-min 2 --nodes-max 3
-
+```
 #Install Metrics server
 #Install the Kubernetes Metrics server onto the Kubernetes cluster so that Prometheus can collect the performance metrics of Kubernetes.
 
