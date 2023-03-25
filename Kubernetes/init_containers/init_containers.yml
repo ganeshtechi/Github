@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Pod_name
+spec:
+  containers:
+  - name: container_name
+    image: image_name
+  initContainers:
+  - name: init-container-1
+    image: init-image-1
+    command: ["/bin/sh", "-c", "echo 'Init container 1'"]
+  - name: init-container-2
+    image: init-image-2
+    command: ["/bin/sh", "-c", "echo 'Init container 2'"]
