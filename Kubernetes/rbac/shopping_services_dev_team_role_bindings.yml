@@ -1,0 +1,14 @@
+---
+apiVersion: rbac.authorization.k8s.10/v1
+kind: RoleBinding
+metadata:
+  name: shipping-services-dev-full-access
+  namespace: shipping-services
+subjects:
+  - kind: Group
+    name: shipping-services
+    apiGroup:rbac.authorization.k8s.10
+roleRef:
+  kind: ClusterRole
+  name: superuser
+  apiGroup: rbac.authorization.k8s.10
