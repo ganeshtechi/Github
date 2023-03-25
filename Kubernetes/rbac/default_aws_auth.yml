@@ -1,0 +1,14 @@
+#kubectl get configmap aws-auth -n Kube-system -O yaml
+---
+apiVersion: v1
+data:
+  mapRoles:
+    - groups:
+      -  system: bootstrappers
+      -  system: nodes
+      rolearn: arn:aws:iam::0000000000:role/eksNodeRole #Any node that needs to join the cluster needs this IAM role
+      username: system: node: {{EC2PrivateDNSName}}
+      kind: ConfigMap
+      metadata:
+        name: aws-auth
+        namespace: kube-system
