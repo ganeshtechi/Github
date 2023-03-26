@@ -1,5 +1,9 @@
 #The command is used to update state file to match with running resources
 #If you delete any resource manually and run the refresh command then the statefile will be updated.
+#Terraform refresh will not modify remote objects, but will modify the terraform state
+#Command: terraform refresh
+#Command in latest version: terraform apply -refresh-only -auto-approve
+
 
 provider "aws" {
 	region = "us-east-1"
